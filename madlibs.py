@@ -65,8 +65,10 @@ def show_madlib():
     pick_color = request.args.get("color")
     pick_noun = request.args.get("noun")
     pick_adj = request.args.get("adj")
+    pick_place = request.args.get("place")
+    pick_food = request.args.get("food")
     # print(request.args)
-    return render_template("madlib.html", color=pick_color, noun=pick_noun, adj=pick_adj)
+    return render_template("madlib.html", color=pick_color, noun=pick_noun, adj=pick_adj, place=pick_place, food=pick_food)
 
 if __name__ == "__main__":
     # Setting debug=True gives us error messages in the browser and also
