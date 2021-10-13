@@ -6,6 +6,13 @@
 <body>
     There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
     When the stranger went to pick it up, it burst into flames in a totally
-    {{ adj }} way. They then went to {{ place }} and had their favorte {{ food }} !
+    {{ adj }} way. They then went to {{ place }} and had their favorite 
+    {% for item in food %}
+        {% if loop.last %}
+        and {{ item }}
+        {% else %}
+        {{ item }},
+        {% endif %}
+    {% endfor %}
 </body>
 </html>
